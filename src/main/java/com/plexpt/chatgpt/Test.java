@@ -19,7 +19,7 @@ import java.util.List;
  */
 public class Test {
     public static void main(String[] args) {
-        Proxy proxys = Proxys.http("127.0.0.1",10809);
+        Proxy proxys = Proxys.http("127.0.0.1",7890);
         Images images = Images.builder()
                 .proxy(proxys)
                 .apiKey("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")
@@ -28,7 +28,7 @@ public class Test {
                 .build()
                 .init();
 
-        File file = new File("C:\\Users\\马同徽\\Pictures\\微信图片_20230606140621.png");
+        File file = new File("/Users/chenyongqing/Desktop/20230705-132352.jpeg");
         Variations variations = Variations.ofURL(1,"256x256");
         Generations generations = Generations.ofURL("一只鲨鱼和一直蜜蜂结合成一种动物",1,"256x256");
         ImagesRensponse imagesRensponse = images.variations(file,variations);
